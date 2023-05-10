@@ -20,13 +20,15 @@ public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private String id;
-    @NotNull
-//    private String name;
     private String type;
-    private String status;
-    private String balance;
-//    private String currency;
-//    private String created;
-//    private String updated;
-//    private String owner;
+    private double balance;
+    private String ownerId;
+
+    public void deposit(double amount) {
+        balance += amount;
+    }
+
+    public void withdraw(double amount) {
+        balance -= amount;
+    }
 }
