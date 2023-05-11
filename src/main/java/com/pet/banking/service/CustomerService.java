@@ -75,7 +75,6 @@ public class CustomerService implements ICustomerService{
         return found;
     }
 
-    @GetMapping("/{id}/accounts")
     public List<Account> getAllAccountsByCustomerId(@PathVariable Long id) {
         Optional<Customer> found = customerRepository.findById(id);
         if(found.isEmpty()) {
