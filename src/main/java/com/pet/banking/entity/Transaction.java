@@ -17,8 +17,8 @@ public class Transaction {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private Long customerFromId;
-    private Long customerToId;
+    private Long UserFromId;
+    private Long UserToId;
     private double amount;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dateTimeOfTransaction;

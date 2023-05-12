@@ -1,4 +1,4 @@
-CREATE TABLE customers
+CREATE TABLE Users
 (
     id         BIGSERIAL NOT NULL,
     email      VARCHAR(25),
@@ -12,8 +12,8 @@ CREATE TABLE accounts
     id          BIGSERIAL NOT NULL,
     balance     FLOAT(53),
     type        VARCHAR(255),
-    customer_id BIGSERIAL NOT NULL,
+    User_id BIGSERIAL NOT NULL,
     PRIMARY KEY (id),
-    FOREIGN KEY (customer_id) REFERENCES customers (id)
+    FOREIGN KEY (User_id) REFERENCES Users (id)
         ON UPDATE CASCADE ON DELETE CASCADE
 );
